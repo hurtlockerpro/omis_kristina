@@ -1,0 +1,26 @@
+
+header{
+    background: rgb(59, 116, 59);
+    height: 100px;
+}
+
+#myHeader {
+    color: blueviolet;
+}
+
+
+.myHeader {
+    font-size: 48px;
+}
+
+.colorRed {
+    color: red;
+}
+
+.colorGreen{
+    /* 
+    font-size: 14px; 
+    */
+    color: green;
+}
+
