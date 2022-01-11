@@ -1,8 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;0,900;1,100;1,700;1,900&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    /* font-style: italic; */
+}
+
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh; /* viewheight = % */
+
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+} 
+
 
 .loginBox {
     width: 250px;
-    height: 500px;
-    border: 1px solid rgb(56, 48, 136);
+    height: 400px;
+    /* border: 1px solid rgb(56, 48, 136); */
 
     border-radius: 10px;
+    margin: auto;
+    background-color: #ffffff;
+
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+
+    text-align: center;
+    position: relative;
 }
+
+.loginBox h1 
+{
+    color: #4c4275;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+    .loginBox input[type="text"], .loginBox input[type="password"] {
+
+        box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+        height: 35px;
+        width: 80%;
+        margin: 10px;
+        border: 0;
+        border-radius: 10px;
+
+        color: #4c4275;
+        font-weight: 700;
+        padding-left: 15px;
+        outline: none;
+    }
+
+    ::placeholder {
+        color: #4c4275;
+        font-weight: 700;
+        margin-left: 15px;
+    }
+
+    .loginBox input[type="button"] {
+        height: 35px;
+        width: 125px;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        background-color: #be56d9;
+        color: white;
+        border-radius: 20px;
+        border: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        /*letter-spacing: 2px; */
+        font-size: 10px;
+
+        -webkit-box-shadow: 0px 0px 15px 5px rgba(190,86,217,0.2); 
+        box-shadow: 0px 0px 15px 5px rgba(190,86,217,0.3);
+    }
+
+    .loginBox .middleText {
+        font-weight: 700;
+        color: gray;
+    }
+
+    .loginBox > a[href^="http"]{
+        text-transform: capitalize;
+        text-decoration: none;
+        color: gray;
+        font-weight: 700;
+        position: absolute;
+        bottom: 10px;
+        left: 100px;
+    }
