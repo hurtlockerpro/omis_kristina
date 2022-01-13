@@ -41,56 +41,96 @@ body {
     font-weight: 700;
 }
 
-    .loginBox input[type="text"], .loginBox input[type="password"] {
+.loginBox input[type="text"], .loginBox input[type="password"] {
 
-        box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
-        height: 35px;
-        width: 80%;
-        margin: 10px;
-        border: 0;
-        border-radius: 10px;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+    height: 35px;
+    width: 80%;
+    margin: 10px;
+    border: 0;
+    border-radius: 10px;
 
-        color: #4c4275;
-        font-weight: 700;
-        padding-left: 15px;
-        outline: none;
-    }
+    color: #4c4275;
+    font-weight: 700;
+    padding-left: 15px;
+    outline: none;
+}
 
-    ::placeholder {
-        color: #4c4275;
-        font-weight: 700;
-        margin-left: 15px;
-    }
+::placeholder {
+    color: #4c4275;
+    font-weight: 700;
+    margin-left: 15px;
+}
 
-    .loginBox input[type="button"] {
-        height: 35px;
-        width: 125px;
-        margin-top: 10px;
-        margin-bottom: 25px;
-        background-color: #be56d9;
-        color: white;
-        border-radius: 20px;
-        border: 0;
-        text-transform: uppercase;
-        font-weight: 700;
-        /*letter-spacing: 2px; */
-        font-size: 10px;
+.loginBox input[type="button"] {
+    height: 35px;
+    width: 125px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    background-color: #be56d9;
+    color: white;
+    border-radius: 20px;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    /*letter-spacing: 2px; */
+    font-size: 10px;
 
-        -webkit-box-shadow: 0px 0px 15px 5px rgba(190,86,217,0.2); 
-        box-shadow: 0px 0px 15px 5px rgba(190,86,217,0.3);
-    }
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(190,86,217,0.2); 
+    box-shadow: 0px 0px 15px 5px rgba(190,86,217,0.3);
+    cursor: pointer;
+}
 
-    .loginBox .middleText {
-        font-weight: 700;
-        color: gray;
-    }
+.loginBox .middleText {
+    font-weight: 700;
+    color: gray;
+}
 
-    .loginBox > a[href^="http"]{
-        text-transform: capitalize;
-        text-decoration: none;
-        color: gray;
-        font-weight: 700;
-        position: absolute;
-        bottom: 10px;
-        left: 100px;
-    }
+.loginBox > a[href^="http"]{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: gray;
+    font-weight: 700;
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+}
+
+.loginBox > a[href^="http"]:hover {
+    text-decoration: underline;
+}
+
+/* social links */ 
+.social {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+    border-radius: 50%;
+    margin: 5px;
+
+    text-decoration: none;
+}
+
+.social a:hover > .fab.fa-facebook-f, .social a:hover > .fab.fa-google {
+    color: #be56d9;
+}
+
+.fab.fa-facebook-f {
+    color: blue;
+}
+
+.fab.fa-google {
+    color: aqua;
+}
+
