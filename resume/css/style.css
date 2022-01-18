@@ -1,0 +1,25 @@
+
+.parent {
+    border: 1px solid gray;
+    display: grid;
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px 50px; */
+    height: 300px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.child {
+    /* border: 1px solid green; */
+    margin: 5px;
+    /* flex-grow: 1; */
+}
+
+.growUp-3{
+    flex-grow: 3;
+}
+
+/* my resume */
+
+
