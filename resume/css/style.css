@@ -1,3 +1,10 @@
+:root {
+    --box-bg-light: #24242e;
+    --box-bg-middle: #2d2d35;
+    --box-bg-dark: #1f1f2b;
+    --active-color: #f5c346;
+}
+
 
 .parent {
     border: 1px solid gray;
@@ -21,5 +28,164 @@
 }
 
 /* my resume */
+.card-bg-light {
+    background-color: var(--box-bg-light);
+}
 
+.card-bg-light h3, .card-bg-middle h5 {
+    color: white;
+}
 
+.card-bg-light .card-text > div, .card-bg-middle .card-text {
+    color: #54535a;
+    font-weight: bold;
+} 
+
+.card {
+    padding: 0;
+}
+
+.card-bg-middle {
+    background-color: var(--box-bg-middle);
+}
+
+.card-bg-middle a:link, .card-bg-middle a:active, 
+.card-bg-middle a:visited  {
+    color: var(--active-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card-bg-middle .card-link::after{
+    content: '\f054';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 5px;
+    font-size: 12px;
+    position: relative;
+    bottom: 1px;
+} 
+
+/* CIRCLE PROGRESS BAR */
+.circleProgress {
+    position: relative;
+    height: 85px;
+    width: 60px;
+    text-align: center;
+    margin: 25px;
+    color: white;
+}
+.wrapper {
+    width: 60px; /* Set the size of the progress bar */
+    height: 60px;
+    /*position: absolute;*/ /* Enable clipping */
+    clip: rect(0px, 100px, 100px, 50px); /* Hide half of the progress bar */
+  }
+  /* Set the sizes of the elements that make up the progress bar */
+  .circle {
+    width: 60px;
+    height: 60px;
+    border: 5px solid var(--active-color);
+    border-radius: 50px;
+    position: absolute;
+    clip: rect(0px, 50px, 100px, 0px);
+  }
+  /* Using the data attributes for the animation selectors. */
+  /* Base settings for all animated elements */
+  div[data-anim~=base] {
+    -webkit-animation-iteration-count: 1;  /* Only run once */
+    -webkit-animation-fill-mode: forwards; /* Hold the last keyframe */
+    -webkit-animation-timing-function:linear; /* Linear animation */
+  }
+  
+  .wrapper[data-anim~=wrapper] {
+    -webkit-animation-duration: 0.01s; /* Complete keyframes asap */
+    -webkit-animation-delay: 3s; /* Wait half of the animation */
+    -webkit-animation-name: close-wrapper; /* Keyframes name */
+  }
+  
+  .circle[data-anim~=left] {
+    -webkit-animation-duration: 6s; /* Full animation time */
+    -webkit-animation-name: left-spin;
+  }
+  
+  .circle[data-anim~=right] {
+    -webkit-animation-duration: 3s; /* Half animation time */
+    -webkit-animation-name: right-spin;
+  }
+  /* Rotate the right side of the progress bar from 0 to 180 degrees */
+  @-webkit-keyframes right-spin {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(180deg);
+    }
+  }
+  /* Rotate the left side of the progress bar from 0 to 360 degrees */
+  @-webkit-keyframes left-spin {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  /* Set the wrapper clip to auto, effectively removing the clip */
+  @-webkit-keyframes close-wrapper {
+    to {
+      clip: rect(auto, auto, auto, auto);
+    }
+  }
+
+.circleProgress .percentage {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    color: white;
+}
+
+.card-bg-dark {
+    background-color: var(--box-bg-dark);
+}
+
+/* LINEAR PROGRESS BAR */ 
+.progress {
+    height: 5px;
+}
+.progress-bar {
+    height: 5px;
+    background-color: var(--active-color);
+}
+
+.progressWrapper {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.progressWrapper .title {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* LINKS */
+
+ .links a {
+    color: #54535a;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+ }
+ .links a::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 8px;
+    position: relative;
+    bottom: 1px;
+    right: 5px;
+    color: var(--active-color);
+ }   
