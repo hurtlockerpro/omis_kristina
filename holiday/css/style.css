@@ -66,6 +66,11 @@
         position: relative;
         top: -40px;
     }
+
+    .customWidhtRow {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
     
 }
 /* phone */
@@ -95,6 +100,138 @@
         background-repeat: no-repeat;
     }
 
-    
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 
+}
+
+.btnSize {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    text-transform: capitalize;
+}
+.customBtn1 {
+    background-color: #01b3a7;
+    border: 0;
+    color: white;
+}
+.customBtn2 {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+.tab-pane {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+
+/* nav-tabs */ 
+
+.nav {
+    justify-content: space-between;
+    border-bottom: 0px !important;
+    border-bottom: 2px solid #dee2e6 !important;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border: 0;
+    color: #dee2e6;
+    width: 100%;
+    margin-bottom: -2px !important;
+}
+
+.nav-link.active {
+    color: #01b3a7 !important;
+    border-bottom: 2px solid #01b3a7 !important;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.nav-link:hover {
+    color: #01b3a7 !important;
+    border: 0;
+}
+
+.nav-item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    border: 0;
+}
+
+/* price tag */
+
+.price {
+    height: 50px;
+    width: 50px;
+    background-color: #01b3a7;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 0% 70%);   
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.customColWrapper{
+    border: 1px solid #dee2e6;
+    /* position: relative; */
+}
+/*
+div[class^="col"] {
+    padding: 0;
+}
+*/
+
+.customImageCol {
+    padding: 0;
+}
+
+/* image */ 
+
+.bgImage {
+    height: 350px;
+    background-image: url("https://picsum.photos/id/208/1920/1920");
+    /*background-position: bottom;*/
+    background-size: contain;
+    background-blend-mode: multiply;
+}
+
+/* animation */
+
+#animation {
+    height: 350px;
+
+}
+
+#animation .box {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    position: relative;
+    animation-name: movingBox;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+
+@keyframes movingBox {
+    0%{
+        left: 0;
+        background-color: white;
+        transform: rotateZ(0deg);
+    }
+    50% {
+        background-color: red;
+    }
+    100% {
+        left: 300px;
+        background-color: #01b3a7;
+        transform: rotateZ(360deg);
+    }
 }
