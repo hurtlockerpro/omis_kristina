@@ -141,7 +141,7 @@ for (let index = 0; index < newCars.length; index++) {
     }
 }
 
-/**/
+/*
 let count = '0'; //prompt("Please enter your elements count...");
 if (count != null){
     console.log('element count: ', count);
@@ -182,14 +182,99 @@ function generateBox(content){
 }
 
 
-
-
-/* */ 
-
 let box = document.getElementById('box')
-let btn = document.getElementById('btn')
+let btnRight = document.getElementById('btnRight')
+let btnDown = document.getElementById('btnDown')
+
 let leftWidth = 0;
-btn.addEventListener('click', function(){
+let topWidth = 0;
+
+btnRight.addEventListener('click', function(){
     leftWidth += 10 
     box.style.left = leftWidth + 'px'
 })
+
+btnDown.addEventListener('click', function(){
+    topWidth += 10 
+    box.style.top = topWidth + 'px'
+})
+*/
+
+
+
+/* multiply table */
+
+let row = [1,2,3,4,5,6,7,8,9,10]
+let col = [1,2,3,4,5,6,7,8,9,10]
+let rowElement = 0
+let colElement = 0
+
+let tds = ''
+
+let trs = ''
+
+// header row creation
+let ths = '<th></th>'
+for (let index = 0; index < row.length; index++) {
+    const element = row[index];
+    ths += generateThElement(element, 'col')
+}
+ths = generateTrElement(ths)
+
+
+for (let rowIndex = 0; rowIndex < row.length; rowIndex++) {
+    rowElement = row[rowIndex]; // row[1]
+    //console.log('row:', rowIndex, ', value: ', rowElement);
+    tds = ''
+    for (let colIndex = 0; colIndex < col.length; colIndex++) {
+        colElement = col[colIndex];
+        //console.log('col:', colIndex, ', value: ', colElement);
+        //console.log(rowElement, '*', colElement, '=',  rowElement * colElement);
+        if (colIndex == 0) tds += generateThElement(rowElement, 'row')
+        tds += generateTdElement(rowElement * colElement)
+    }
+    trs += generateTrElement(tds)
+}
+
+console.log( generateTableElement(trs) );
+
+let tbl = document.getElementById('multiplyTable')
+tbl.innerHTML = generateTableElement(ths + trs)
+
+
+
+function generateTableElement(value){
+    return `<table class="table table-dark table-striped">${ value }</table>`
+}
+
+function generateTrElement(value){
+    return `<tr>${ value }</tr>`
+}
+
+function generateTdElement(value){
+    return `<td>${ value }</td>`
+}
+
+/**
+ * 
+ * @param {*} value This is th value
+ * @param {*} scope can be only row or col
+ * @returns Html code of table header
+ */
+function generateThElement(value, scope) {
+    return `<th scope="${ scope }">${ value }</th>`
+}
+
+/*
+console.log(
+  generateTableElement(
+      generateTrElement(
+          generateTdElement('hello table')+  
+          generateTdElement('hello table 2')
+      )
+  )  
+);*/
+
+
+
+
