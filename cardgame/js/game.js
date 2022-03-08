@@ -117,11 +117,13 @@ for (let index = 0; index < cards.length; index++) {
             imageID2 = undefined
         } else {
             setTimeout(function(){
-                openedCards[0].querySelector('.card-inner').classList.remove('flip-show')
-                openedCards[0].classList.remove('opened')
+                openedCards = document.getElementsByClassName('opened')
 
                 openedCards[0].querySelector('.card-inner').classList.remove('flip-show')
                 openedCards[0].classList.remove('opened')
+
+                openedCards[1].querySelector('.card-inner').classList.remove('flip-show')
+                openedCards[1].classList.remove('opened')
 
                 imageID1 = undefined
                 imageID2 = undefined
