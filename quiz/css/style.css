@@ -1,0 +1,19 @@
+.container {
+    margin-top: 15px;
+}
+
+#question {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 25px;
+    margin-bottom: 15px;
+} 
+
+#answers {
+    margin-left: 15px;
+}
+
+.buttons {
+    text-align: end;
+}
